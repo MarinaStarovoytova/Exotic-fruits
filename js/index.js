@@ -3,7 +3,7 @@ const fruitsList = document.querySelector('.fruits__list'); // список ка
 const shuffleButton = document.querySelector('.shuffle__btn'); // кнопка перемешивания
 const filterButton = document.querySelector('.filter__btn'); // кнопка фильтрации
 const kindInput = document.querySelector('.kind__input'); // поле с названием вида
-const colorInput = document.querySelector('.color__input'); // поле с названием цвета
+const colorSelect = document.querySelector('.color__select'); // поле с названием цвета
 const weightInput = document.querySelector('.weight__input'); // поле с весом
 const addActionButton = document.querySelector('.add__action__btn'); // кнопка добавления
 
@@ -33,8 +33,6 @@ const display = () => {
   // TODO: очищаем fruitsList от вложенных элементов,
   // чтобы заполнить актуальными данными из fruits
   fruitsList.innerHTML = '';
-
-
 
   for (let i = 0; i < fruits.length; i++) {
     // TODO: формируем новый элемент <li> при помощи document.createElement,
@@ -71,6 +69,12 @@ const display = () => {
         break;
       case 'светло-коричневый':
         li.className = 'fruit__item fruit_lightbrown';
+        break;
+      case 'красный':
+        li.className = 'fruit__item fruit_red';
+        break;
+      case 'оранжевый':
+        li.className = 'fruit__item fruit_orange';
         break;
     }
 
@@ -159,10 +163,11 @@ addActionButton.addEventListener('click', () => {
   // TODO: создание и добавление нового фрукта в массив fruits
   // необходимые значения берем из kindInput, colorInput, weightInput
   const kindNew = kindInput.value;
-  const colorNew = colorInput.value;
+  const colorNew = colorSelect.value;
   const weightNew = weightInput.value;
 
-  if (kindInput.value == '' || colorInput.value == '' || weightInput.value == '') {
+
+  if (kindInput.value == '' || colorSelect.value == '' || weightInput.value == '') {
     alert('Вы ввели пустое поле');
   } else {
     let temp = JSON.parse(fruitsJSON);
@@ -172,10 +177,11 @@ addActionButton.addEventListener('click', () => {
   }
 
   kindInput.value = '';
-  colorInput.value = '';
+  colorSelect.value = '';
   weightInput.value = '';
 
   display();
 
+  
 });
 

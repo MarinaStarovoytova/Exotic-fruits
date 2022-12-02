@@ -5,8 +5,7 @@
 body {
   margin: 0;
   font-size: 15px;
-  font-family: 'Courier New', Courier, monospace;
-
+  font-family: 'Courier New', Courier, monospace;  
 }
 
 ul[class] {
@@ -66,11 +65,22 @@ input {
   max-width: 200px;
 }
 
+select {
+  /* margin: 5px 5px 5px 0;
+  padding: 8px 15px; */
+  width: 200px;
+  height: 56px;
+  border: 10px double #8c00ff50;
+}
+
+option {
+  font-size: 18px;
+}
+
 main {
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  max-height: 100vh;
+  height: 100%;
 }
 
 .wrapper__title {
@@ -83,7 +93,6 @@ main {
 /* Панель управления */
 .panel__wrapper {
   flex-basis: 32%;
-  max-height: 100vh;
   padding: 0px 10px;
   display: flex;
   flex-direction: column;
@@ -94,12 +103,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .panel__wrapper1 {
   flex-basis: 32%;
-  max-height: 100vh;
   padding: 0px 10px;
   display: flex;
   flex-direction: column;
@@ -124,9 +131,9 @@ main {
 
 .fruits__wrapper {
   flex-basis: 100%;
-  background: url(../img/exotic-fruits.jpg);
+  background: linear-gradient(rgb(231, 230, 230), rgba(24, 24, 24, 0.144)), url(../img/exotic-fruits.jpg);
   max-height: inherit;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .fruits__list {
@@ -163,6 +170,14 @@ main {
 
 .fruit_lightbrown {
   background: #cd853f;
+}
+
+.fruit_red {
+  background: #ff0000;
+}
+
+.fruit_orange {
+  background: #ff7300;
 }
 
 .fruit__info {
