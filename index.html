@@ -12,12 +12,9 @@
   <main>
     <!-- ПАНЕЛЬ УПРАВЛЕНИЯ -->
     <section class="panel__wrapper">
-      <h2 class="wrapper__title">⚙️ Панель управления</h2>
-      <div class="panel__devtools">
-        <!-- TODO: при нажатии элементы массива перемешиваются в случайном порядке -->
-        <button class="shuffle__btn line">Перемешать</button>
-      </div>
-
+      <!-- <h2 class="wrapper__title">⚙️ Панель управления</h2> -->
+      
+      <h2 class="wrapper__title">Фильтрация карточек</h2>
       <div class="line">
         <!-- пользователь указывает нижнюю границу weight -->
         <div>min weight:</div>
@@ -33,6 +30,7 @@
       <!-- TODO: при нажатии элементы массива фильтруются в пределах [minweight, maxweight] -->
       <button class="filter__btn line">Фильтровать</button>
 
+      <h2 class="wrapper__title">Сортировка карточек</h2>
       <div class="line">
         <span>Алгоритм сортировки:</span>
         <!-- TODO: указывается название алгоритма сортировки -->
@@ -57,8 +55,6 @@
       <!-- TODO: при нажатии происходит сортировка и рассчет времени сортировки -->
       <button class="sort__action__btn_weight line">Сортировать по weight</button>
 
-      <!-- пользователь указывает значения характеристик будущего фрукта -->
-
     </section>
 
     <!-- СПИСОК ЭКЗОТИЧЕСКИХ ФРУКТОВ -->
@@ -70,25 +66,28 @@
     </section>
 
     <section class="panel__wrapper1">
-      <div class="panel__devtools1">
-        <h2 class="wrapper__title">⚙️ Добавление нового фрукта</h2>
-        <div class="line">
-          <div>kind:</div>
-          <input class="kind__input" />
-        </div>
-
-        <div class="line">
-          <div>color:</div>
-          <input class="color__input" />
-        </div>
-
-        <div class="line">
-          <div>weight:</div>
-          <input class="weight__input" />
-        </div>
-
-        <!-- TODO: при нажатии новый фрукт добавляется в конец списка -->
-        <button class="add__action__btn line">Добавить фрукт</button>
+      <h2 class="wrapper__title">Перемешивание карточек</h2>
+      <!-- TODO: при нажатии элементы массива перемешиваются в случайном порядке -->
+      <button class="shuffle__btn line">Перемешать</button>
+      <!-- пользователь указывает значения характеристик будущего фрукта -->
+      <h2 class="wrapper__title">Добавление нового фрукта</h2>
+      <div class="line">
+        <div>kind:</div>
+        <input class="kind__input" />
+      </div>
+    
+      <div class="line">
+        <div>color:</div>
+        <input class="color__input" />
+      </div>
+    
+      <div class="line">
+        <div>weight:</div>
+        <input class="weight__input" />
+      </div>
+    
+      <!-- TODO: при нажатии новый фрукт добавляется в конец списка -->
+      <button class="add__action__btn line">Добавить фрукт</button>
       </div>
     </section>
 

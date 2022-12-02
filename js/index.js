@@ -164,7 +164,6 @@ addActionButton.addEventListener('click', () => {
 
   if (kindInput.value == '' || colorInput.value == '' || weightInput.value == '') {
     alert('Вы ввели пустое поле');
-    JSON.parse(fruitsJSON) = '';
   } else {
     let temp = JSON.parse(fruitsJSON);
     temp.push({ 'kind': kindNew, 'color': colorNew, 'weight': weightNew });
